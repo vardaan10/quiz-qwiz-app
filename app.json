@@ -9,7 +9,8 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.vardaanebeta.quizqwizapp"
     },
     "android": {
       "adaptiveIcon": {
@@ -46,9 +47,7 @@
         "projectId": "24ce074a-4057-4d00-a426-0c5a144b567f"
       }
     },
-    "runtimeVersion": {
-      "policy": "appVersion"
-    },
+    "runtimeVersion": "1.0.0",
     "updates": {
       "url": "https://u.expo.dev/24ce074a-4057-4d00-a426-0c5a144b567f"
     }
