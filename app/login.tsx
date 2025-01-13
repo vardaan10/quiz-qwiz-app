@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import MaterialIcons from "@expo/vector-icons/MaterialIcons"
-import { SafeAreaView, Text, View, TextInput, Pressable, Button } from "react-native"
+import { SafeAreaView, Text, View, TextInput, Pressable, Button, Alert } from "react-native"
 
 import { useAuth } from "@/lib/context/auth"
 
@@ -13,6 +13,9 @@ export default function Login() {
   const { requestOTP, verifyOTP } = useAuth()
 
   async function handleRequestOtp() {
+    if (!username) {
+      Alert.alert("Please enter a username")
+    }
     await requestOTP(username)
     setShowOTPInput(true)
   }
