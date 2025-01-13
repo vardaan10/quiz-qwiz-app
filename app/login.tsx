@@ -35,7 +35,7 @@ export default function Login() {
     <SafeAreaView className="flex-1 items-center justify-center bg-white">
       <View className="border rounded-md p-4 flex-col gap-4 w-3/4">
         <View className="flex-col gap-3">
-          <Text className="font-bold text-xl">Username</Text>
+          <Text className="font-bold text-xl">User</Text>
           <TextInput
             onChangeText={setUsername}
             placeholder="Enter username"
