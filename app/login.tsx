@@ -1,3 +1,4 @@
+import { Link } from "expo-router"
 import React, { useState } from "react"
 import MaterialIcons from "@expo/vector-icons/MaterialIcons"
 import { SafeAreaView, Text, View, TextInput, Pressable, Button, Alert } from "react-native"
@@ -56,7 +57,12 @@ export default function Login() {
                   <MaterialIcons name="check-box-outline-blank" size={24} color="black" />
                 )}
               </Pressable>
-              <Text className="text-lg">Agree with terms and conditions</Text>
+              <Text className="text-lg">
+                Agree with{" "}
+                <Link href="/terms" className="underline pl-2 text-blue-600">
+                  terms and conditions
+                </Link>
+              </Text>
             </View>
 
             <Button onPress={handleRequestOtp} title="Get OTP" />
