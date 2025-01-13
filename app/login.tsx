@@ -13,9 +13,14 @@ export default function Login() {
   const { requestOTP, verifyOTP } = useAuth()
 
   async function handleRequestOtp() {
-    if (!username) {
-      Alert.alert("Please enter a username")
+    if (!username && checked) {
+      Alert.alert("Alert", "Please enter a username")
     }
+
+    if (!checked) {
+      Alert.alert("Alert", "Terms and conditions are mandatory")
+    }
+
     await requestOTP(username)
     setShowOTPInput(true)
   }
