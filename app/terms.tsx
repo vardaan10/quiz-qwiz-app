@@ -1,4 +1,7 @@
-import { SafeAreaView, ScrollView, Text, View } from "react-native"
+import { ScrollView, View } from "react-native"
+
+import { ThemedText } from "@/components/ThemedText"
+import { ThemedView } from "@/components/ThemedView"
 
 export default function Terms() {
   const termsData = [
@@ -80,15 +83,15 @@ export default function Terms() {
   ]
 
   return (
-    <SafeAreaView className="flex-1 items-center justify-center bg-white">
+    <ThemedView className="flex-1">
       <ScrollView className="px-4 pt-4">
         {termsData.map((term, index) => (
-          <View key={index} className="pb-2">
-            <Text className="text-lg font-semibold pb-2">{term.title}</Text>
-            <Text>{term.content}</Text>
+          <View key={index} className="pb-4">
+            <ThemedText className="text-lg font-semibold pb-2">{term.title}</ThemedText>
+            <ThemedText>{term.content}</ThemedText>
           </View>
         ))}
       </ScrollView>
-    </SafeAreaView>
+    </ThemedView>
   )
 }
